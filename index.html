@@ -188,7 +188,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
           <div class="scr">
             <span class="kicker">🕒 <span id="currentDateDisplay">Hari, tanggal</span></span>
             <h1>Presensi Mulai Shift</h1>
-            <p class="sub">Hari baru di Toko IDM Jaya. Tulis namamu dulu sebelum mulai bekerja.</p>
+            <p class="sub">Hari baru di Toko IDM Jaya. <br> Mohon tulis nama Bapak/Ibu terlebih dahulu.</p>
             <div class="login">
               <input type="text" id="cashierNameInput" placeholder="Ketik nama Bapak/Ibu..." maxlength="50" autocomplete="off" aria-label="Nama Bapak/Ibu" onkeydown="if(event.key==='Enter')submitClockIn()">
               <button class="btn" onclick="submitClockIn()">Masuk</button>
@@ -198,8 +198,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
           <div class="taskbar"><span class="ic"></span><span class="ic o"></span><span>CINTA: Ceria Melayani Semangat Berprestasi</span><span class="tm">07:00</span></div>
           <div class="scr-glare"></div>
         </div>
-        <div class="sticky s1">SHIFT<br>PAGI!!</div>
-        <div class="sticky s2">jangan telat</div>
+        <div class="sticky s1">Yuk bisa yuk</div>
       </div>
       <div class="stand"></div><div class="stand-base"></div>
     </div>
@@ -209,10 +208,10 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
   <div class="ovl dim" id="briefingScreen">
     <div class="paper">
       <span class="ph"><i></i>Briefing awal shift</span>
-      <div class="boss"><div class="av">🙋🏻‍♂️</div><div><b>Pak Ferdi</b><span class="mini">Chief of Store Toko IDM Jaya</span></div></div>
-      <h2>Selamat bekerja, <span id="briefingCashierName">Kasir</span>!</h2>
+      <div class="boss"><div class="av">🙋🏻‍♂️</div><div><b>Bapak Ferdi</b><span class="mini">Chief of Store Toko IDM Jaya</span></div></div>
+      <h2>Selamat bekerja, Bapak/Ibu <span id="briefingCashierName">Kasir</span>!</h2>
       <p>Hari ini toko diperkirakan sangat dinamis. Targetnya bukan cuma sales, tapi juga <b>Kepuasan Pelanggan</b> dan <b>Kekompakan Tim</b>.</p>
-      <div class="note">⚡ Setiap respons yang kamu ambil menentukan pelanggan pulang puas atau kecewa, dan memengaruhi moral tim.</div>
+      <div class="note">⚡ Setiap respons yang Bapak/Ibu ambil menentukan pelanggan pulang dengan puas atau kecewa, serta memengaruhi moral tim kerja juga.</div>
       <button class="btn big" onclick="startSimulatedShift()">Mulai bekerja</button>
     </div>
   </div>
@@ -476,7 +475,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
           text: "Inisiatif mengambil alat pel dan membersihkan noda sebelum pelanggan lewat.",
           csat: 10, morale: 10,
           dialogue: "Pelanggan: 'Wah, tokonya bersih dan wangi sekali pagi-pagi, jadi suka belanja di sini.'",
-          rationale: "Inisiatif ekstra Anda memastikan standar kebersihan toko terjaga dengan baik tanpa saling lempar tanggung jawab."
+          rationale: "Inisiatif ekstra Bapak/Ibu memastikan standar kebersihan toko terjaga dengan baik tanpa saling lempar tanggung jawab."
         }
       ]
     },
@@ -512,7 +511,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
     {
       time: "10:00 WIB",
       title: "Stok Promo Kosong",
-      desc: "Promo sangat ramai. Display minyak goreng promo di lorong utama habis. Seorang Ibu mendatangi Anda dengan wajah kecewa.",
+      desc: "Promo sangat ramai. Display minyak goreng promo di lorong utama habis. Seorang Ibu mendatangi Bapak/Ibu dengan wajah kecewa.",
       visual: V[2],
       options: [
         {
@@ -541,7 +540,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
     {
       time: "12:30 WIB",
       title: "Uang Koin Logam Menggunung",
-      desc: "Antrean panjang. Pelanggan di hadapan Anda mengeluarkan sekantong penuh koin logam receh untuk membayar belanjaan.",
+      desc: "Antrean panjang. Pelanggan di hadapan Bapak/Ibu mengeluarkan sekantong penuh koin logam receh untuk membayar belanjaan.",
       visual: V[3],
       options: [
         {
@@ -806,7 +805,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
         <div class="scene-desc">${scene.desc}</div>
         ${scene.visual}
       </div>
-      <div class="choice-prompt">Apa yang kamu lakukan, ${cashierName}?</div>
+      <div class="choice-prompt">Apa yang akan kamu lakukan, Bapak/Ibu ${cashierName}?</div>
       <div class="choices-wrapper">
         ${optionsHtml}
       </div>
@@ -873,16 +872,16 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
 
     let dominantProfile = "DISENGAGED";
     let dominantClass = "tag-red";
-    let dominantDesc = `${cashierName} cenderung bersikap pasif. Hal ini menyebabkan kepuasan pelanggan merosot drastis dan beban moral tim menjadi negatif karena sikap apatis terhadap masalah.`;
+    let dominantDesc = `Bapak/Ibu ${cashierName} cenderung bersikap pasif. Hal ini menyebabkan kepuasan pelanggan merosot drastis dan beban moral tim menjadi negatif karena sikap apatis terhadap masalah.`;
 
     if (blue >= yellow && blue >= red) {
       dominantProfile = "ENGAGED";
       dominantClass = "tag-blue";
-      dominantDesc = `Luar biasa, ${cashierName}! menunjukkan sifat kepemilikan terhadap pekerjaan yang baik. Melalui upaya ekstra (Discretionary Effort), hubungan dengan tim kerja dan kepuasan pelanggan meningkat.`;
+      dominantDesc = `Luar biasa, Bapak/Ibu ${cashierName}! menunjukkan sifat kepemilikan terhadap pekerjaan yang baik. Melalui upaya ekstra (Discretionary Effort), hubungan dengan tim kerja dan kepuasan pelanggan meningkat.`;
     } else if (yellow >= blue && yellow >= red) {
       dominantProfile = "SATISFIED";
       dominantClass = "tag-yellow";
-      dominantDesc = `Konsisten dan patuh aturan! Operasional shift berjalan aman di tangan ${cashierName}. Namun, masih terbatas SOP baku. Ingat, pelanggan mengingat sentuhan empati ekstra.`;
+      dominantDesc = `Konsisten dan patuh aturan! Operasional shift berjalan aman di tangan Bapak/Ibu ${cashierName}. Namun, masih terbatas SOP baku. Ingat, pelanggan mengingat sentuhan empati ekstra.`;
     }
 
     area.innerHTML = `
@@ -913,18 +912,18 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
       </div>
 
       <div class="theory-section">
-        <h3 class="theory-title">Employee Engagement atau keterhubungan itu artinya, bukan cuma hadir secara fisik aja, tapi pikiran kita juga harus ikut kerja, dan kita peduli sama hasilnya.” </h3>
+        <h3 class="theory-title">Employee Engagement itu bukan cuma hadir secara fisik saja, tetapi pikiran kita juga harus ikut bekerja dan peduli dengan hasil pekerjaan kita.” </h3>
         <div class="theory-item" style="border-left-color: #8b5cf6;">
           <strong>Meaningfulness</strong>
-          <p>Perasaan bahwa pekerjaan Anda bermakna dan melindungi orang lain secara tulus.</p>
+          <p>Perasaan bahwa pekerjaan yang dilakukan itu bermakna dan memiliki dampak bagi orang lain serta perusahaan.</p>
         </div>
         <div class="theory-item" style="border-left-color: #10b981;">
           <strong>Psychological Safety</strong>
-          <p>Iklim kerja saling peduli di mana tim berani mencari solusi bersama tanpa rasa takut disalahkan.</p>
+          <p>Iklim kerja saling peduli, seluruh anggota tim berani untuk mencari solusi bersama tanpa rasa takut disalahkan.</p>
         </div>
         <div class="theory-item" style="border-left-color: #f59e0b;">
           <strong>Availability</strong>
-          <p>Kesiapan kognitif dan emosional staf untuk sigap merespon kendala tak terduga, alih-alih pasrah pada situasi.</p>
+          <p>Kesiapan kognitif dan emosional anggota tim untuk sigap merespon kendala tak terduga, alih-alih pasrah pada situasi.</p>
         </div>
       </div>
 
