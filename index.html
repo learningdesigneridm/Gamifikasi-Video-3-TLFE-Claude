@@ -873,16 +873,16 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
 
     let dominantProfile = "DISENGAGED";
     let dominantClass = "tag-red";
-    let dominantDesc = `Rekan ${cashierName} cenderung bersikap pasif. Hal ini menyebabkan Kepuasan Pelanggan merosot drastis dan beban moral tim menjadi negatif karena sikap apatis terhadap masalah.`;
+    let dominantDesc = `${cashierName} cenderung bersikap pasif. Hal ini menyebabkan kepuasan pelanggan merosot drastis dan beban moral tim menjadi negatif karena sikap apatis terhadap masalah.`;
 
     if (blue >= yellow && blue >= red) {
       dominantProfile = "ENGAGED";
       dominantClass = "tag-blue";
-      dominantDesc = `Luar biasa, Rekan ${cashierName}! Anda menunjukkan kepemilikan kerja otentik. Melalui upaya ekstra (Discretionary Effort), Anda menciptakan iklim kolaborasi hebat dan loyalitas konsumen tinggi.`;
+      dominantDesc = `Luar biasa, ${cashierName}! menunjukkan sifat kepemilikan terhadap pekerjaan yang baik. Melalui upaya ekstra (Discretionary Effort), hubungan dengan tim kerja dan kepuasan pelanggan meningkat.`;
     } else if (yellow >= blue && yellow >= red) {
       dominantProfile = "SATISFIED";
       dominantClass = "tag-yellow";
-      dominantDesc = `Konsisten dan patuh aturan! Operasional shift berjalan aman di tangan Rekan ${cashierName}. Namun, Anda masih membatasi diri pada teks baku SOP. Ingat, pelanggan mengingat sentuhan empati ekstra.`;
+      dominantDesc = `Konsisten dan patuh aturan! Operasional shift berjalan aman di tangan ${cashierName}. Namun, masih terbatas SOP baku. Ingat, pelanggan mengingat sentuhan empati ekstra.`;
     }
 
     area.innerHTML = `
@@ -913,18 +913,18 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--warn);outline-o
       </div>
 
       <div class="theory-section">
-        <h3 class="theory-title">Tiga pilar Work Engagement</h3>
+        <h3 class="theory-title">Employee Engagement atau keterhubungan itu artinya, bukan cuma hadir secara fisik aja, tapi pikiran kita juga harus ikut kerja, dan kita peduli sama hasilnya.” </h3>
         <div class="theory-item" style="border-left-color: #8b5cf6;">
-          <strong>Meaningfulness (Kebermaknaan Kerja)</strong>
-          <p>Perasaan bahwa pekerjaan Anda bermakna dan melindungi orang lain secara tulus. Terlihat jelas saat melayani lansia atau anak kecil (Skenario 7 & 8).</p>
+          <strong>Meaningfulness</strong>
+          <p>Perasaan bahwa pekerjaan Anda bermakna dan melindungi orang lain secara tulus.</p>
         </div>
         <div class="theory-item" style="border-left-color: #10b981;">
-          <strong>Psychological Safety (Aman Psikologis)</strong>
-          <p>Iklim kerja saling peduli di mana tim berani mencari solusi bersama (seperti saat selisih kasir) tanpa rasa takut disalahkan (Skenario 6).</p>
+          <strong>Psychological Safety</strong>
+          <p>Iklim kerja saling peduli di mana tim berani mencari solusi bersama tanpa rasa takut disalahkan.</p>
         </div>
         <div class="theory-item" style="border-left-color: #f59e0b;">
-          <strong>Availability (Kesiapan Hadir Sepenuhnya)</strong>
-          <p>Kesiapan kognitif dan emosional staf untuk sigap merespon kendala tak terduga, alih-alih pasrah pada situasi ("Mesin Offline", Skenario 9).</p>
+          <strong>Availability</strong>
+          <p>Kesiapan kognitif dan emosional staf untuk sigap merespon kendala tak terduga, alih-alih pasrah pada situasi.</p>
         </div>
       </div>
 
